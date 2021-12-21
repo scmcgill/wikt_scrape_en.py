@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 ~/bin/python/beautiful_soup/wiktionary/wikt_scrape_en.py $@
