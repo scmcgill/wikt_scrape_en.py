@@ -7,7 +7,6 @@
 - Include part of speech to output.  
 - have translations from a given language print on the same line, separated by commas.  
 - use check_linked_translation function to search for grammatical info on a word if it has a link to its own page.  
-- Site seems to to things like this instead of using divs for language sections/different translations.  
 - foreign-to-english scripts
 - need to add option flags to refine search to a particular language/part of speech
 - what to do about errors for when a page does not exist?
