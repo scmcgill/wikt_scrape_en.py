@@ -1,7 +1,5 @@
-# why is jsoup version getting all items from a given language/translation, but this is only getting the first for each?
 # currently only works for some tests on finding foreign translations of english wiktionary words
 # how to add grammatical info based on part of speech?
-# what to do when there are multiple elements that are translated?
 import re
 import sys # be able to add arguments
 import requests
@@ -38,9 +36,10 @@ def get_translations():
         print( "\n" + x.find("div", class_="NavHead").text)
         for el in langs:
             # print translation for each language, if there
-            item =x.find("span", lang=el)
-            if item:
-                print("    " + el + ": " + item.text)
+            spans =x.find_all("span", lang=el)
+            if spans:
+                for span in spans:
+                    print("    " + el + ": " +span.text)
 # fill URL from arguments string
 URL = "https://en.wiktionary.org/wiki/" + get_search_term() + "#English"
 page = requests.get(URL)
