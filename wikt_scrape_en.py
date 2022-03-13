@@ -25,7 +25,7 @@ def check_linked_translations():
 def get_translations():
     transl = soup.find_all("div", {"id": re.compile(r'Translations-*')})
     # languages whose list items will be selected
-    langs = ["fr", "de", "es", "ar", "fa"] 
+    langs = ["fr", "de", "es", "ar", "fa", "eo"] 
     # check for list item for each language
     for x in transl:
         # get English meaning of each definition
